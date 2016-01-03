@@ -1,9 +1,9 @@
 package main
 
-
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/nuzolx/library-api/Godeps/_workspace/src/gopkg.in/mgo.v2"
 
@@ -14,7 +14,14 @@ import (
 var appC app.AppContext
 
 func init() {
-	session, err := mgo.Dial("localhost")
+
+	url := os.Getenv("MONGOLAB_URI")
+	if len(url) <= 0 {
+		url = "localhost"
+	}
+
+	session, err := mgo.Dial(url)
+
 	if err != nil {
 		panic(err)
 	}
@@ -26,5 +33,10 @@ func init() {
 func main() {
 
 	r := router.NewRouter(&appC)
-	log.Fatal(http.ListenAndServe(":4242", r))
+
+	port := os.Getenv("PORT")
+	if len(port) <= 0 {
+		port = "4242"
+	}
+	log.Fatal(http.ListenAndServe(":"+port, r))
 }
