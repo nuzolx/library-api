@@ -1,6 +1,6 @@
 package db
-import (
 
+import (
 	"gopkg.in/mgo.v2/bson"
 
 	"github.com/nuzolx/library-api/src/app"
@@ -21,7 +21,7 @@ func GetUser(appC *app.AppContext, userName string) (*models.User, error) {
 	collection := appC.DB.C("users")
 
 	var res *models.User
-	if err := collection.Find(bson.M{"login" : userName}).One(&res); err != nil {
+	if err := collection.Find(bson.M{"login": userName}).One(&res); err != nil {
 		return nil, err
 	}
 	return res, nil

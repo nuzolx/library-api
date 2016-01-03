@@ -1,14 +1,14 @@
 package router
 
 import (
+	"log"
 	"net/http"
 	"time"
-	"log"
 
 	"github.com/nuzolx/library-api/src/app"
 )
 
-type Handler func(w http.ResponseWriter, r *http.Request) (error)
+type Handler func(w http.ResponseWriter, r *http.Request) error
 
 func loggingHandler(next http.Handler) http.Handler {
 	fn := func(w http.ResponseWriter, r *http.Request) {

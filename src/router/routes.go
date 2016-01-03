@@ -1,30 +1,29 @@
 package router
 
 import (
-		"github.com/nuzolx/library-api/src/controllers"
 	"github.com/nuzolx/library-api/src/app"
+	"github.com/nuzolx/library-api/src/controllers"
 )
 
 type Route struct {
-	Route string
-	Method string
+	Route   string
+	Method  string
 	Handler Handler
 }
 
 type Routes []Route
 
-
 func GetRoutes(appContext *app.AppContext) Routes {
 
-	server := &controllers.Server{Context:appContext}
+	server := &controllers.Server{Context: appContext}
 
-	 routes := Routes {
-		Route {
+	routes := Routes{
+		Route{
 			"/users",
 			"POST",
 			server.CreateUser,
 		},
-		Route {
+		Route{
 			"/users/{userName}",
 			"GET",
 			server.GetUser,

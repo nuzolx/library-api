@@ -1,7 +1,8 @@
 package utils
+
 import (
-	"net/http"
 	"encoding/json"
+	"net/http"
 )
 
 func Write(w http.ResponseWriter, v interface{}) error {
