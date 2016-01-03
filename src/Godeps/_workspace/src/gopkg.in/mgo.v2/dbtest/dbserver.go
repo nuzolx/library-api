@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"gopkg.in/mgo.v2"
+	"github.com/nuzolx/library-api/src/Godeps/_workspace/src/gopkg.in/mgo.v2"
 	"gopkg.in/tomb.v2"
 )
 

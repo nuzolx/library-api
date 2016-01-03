@@ -1,7 +1,7 @@
 package txn
 
 import (
-	"gopkg.in/mgo.v2/bson"
+	"github.com/nuzolx/library-api/src/Godeps/_workspace/src/gopkg.in/mgo.v2/bson"
 	"sort"
 )
 
