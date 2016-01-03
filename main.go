@@ -27,7 +27,12 @@ func init() {
 	}
 
 	session.SetMode(mgo.Monotonic, true)
-	appC = app.AppContext{DB: session.DB("library")}
+
+	dbName := "library"
+	if url != "localhost" {
+		dbName = ""
+	}
+	appC = app.AppContext{DB: session.DB(dbName)}
 }
 
 func main() {
