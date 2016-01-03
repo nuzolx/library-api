@@ -1,7 +1,7 @@
 package db
 
 import (
-	"gopkg.in/mgo.v2/bson"
+	"github.com/nuzolx/library-api/Godeps/_workspace/src/gopkg.in/mgo.v2/bson"
 
 	"github.com/nuzolx/library-api/app"
 	"github.com/nuzolx/library-api/models"

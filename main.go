@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"gopkg.in/mgo.v2"
+	"github.com/nuzolx/library-api/Godeps/_workspace/src/gopkg.in/mgo.v2"
 
 	"github.com/nuzolx/library-api/app"
 	"github.com/nuzolx/library-api/router"

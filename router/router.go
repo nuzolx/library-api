@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/gorilla/mux"
-	"github.com/justinas/alice"
+	"github.com/nuzolx/library-api/Godeps/_workspace/src/github.com/gorilla/mux"
+	"github.com/nuzolx/library-api/Godeps/_workspace/src/github.com/justinas/alice"
 
 	"github.com/nuzolx/library-api/app"
 )

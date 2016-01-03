@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/gorilla/mux"
+	"github.com/nuzolx/library-api/Godeps/_workspace/src/github.com/gorilla/mux"
 
 	"github.com/nuzolx/library-api/app"
 	"github.com/nuzolx/library-api/db"
